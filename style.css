@@ -1,0 +1,301 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+.container
+{
+    grid-template-areas:
+    "header"
+    "promotion"
+    "social-networks"
+    "product"
+    "data-records"
+    "customer"
+    "review"
+    "download"
+    "footer";
+}
+.header
+{
+    grid-area: header;
+    margin: 1%;
+}
+.header h2
+{
+    display: inline;
+}
+.header ul
+{
+    display:inline-flex;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.header a
+{
+    margin: 25px;
+    color: grey;
+}
+.header button
+{
+    padding:15px;
+    width:150px;
+    border-radius: 10%;
+    border:none;
+    font-size: 20px;
+}
+.header .sign-up
+{
+    background-color: rgba(255, 96, 162, 0.918);
+    color: white;
+    font-weight: bolder;
+}
+.promotion
+{
+    grid-area:promotion;
+    display:inline-flex;
+}
+.promotion .main
+{
+    width: 50%;
+    padding: 10%;
+}
+.promotion .main h1
+{
+    font-size: 55px;
+    color:rgb(0,0,51)
+}
+.promotion .main p
+{
+    color:grey;
+    padding: 20px;
+    padding-left: 0;
+    justify-items: left;
+}
+.promotion p a
+{
+    color:rgb(0,0,51);
+    font-weight: bolder;
+}
+.promotion .preview-container
+{
+    position:relative;
+}
+.promotion .preview
+{
+    margin-left:20px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5%;
+    z-index: -1;
+}
+.promotion .preview .image
+{
+    display:flex;
+    float:left;
+    border:solid 5px rgb(0, 62, 147);
+    width: 110px;
+    height:110px;
+    border-radius: 100%;
+    padding: 5px;
+    border-right:none;
+}
+.promotion .pay
+{
+    display:inline-flex;
+    padding: 30px;
+    background-color: rgb(139, 222, 255);
+    border-radius: 20px;
+    margin-left:20px;
+    margin-top:10px;
+    color:rgb(31, 19, 189);
+    font-size: 20px;
+
+}
+.promotion .roger
+{
+    display:grid;
+    justify-content: left;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    grid-template-columns: auto auto;
+    line-height: 1.8;
+}
+.promotion .roger .work-days
+{
+    padding-top: 17%;
+    padding-left: 100px;
+}
+.promotion .roger p , .promotion .salary p
+{
+    color: grey;
+    font-weight: bolder;
+}
+.promotion .salary
+{
+    margin-top: 5%;
+    line-height: 1.8;
+}
+.promotion .preview-container > .man-image
+{
+    width:60% ;
+    text-align: center;
+    border-radius: 20%;
+    position: absolute;
+    top:40%;
+    left:50%;
+    /* z-index:-1; */
+}
+.promotion .preview-container > .man-image img
+{
+    border-radius: 20%;
+    width:100% ;
+
+}
+.promotion .uploading
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    border-radius: 40px;
+    padding: 10px;
+    width:70%;
+    background-color: white;
+    position:absolute;
+    top:85%;
+    left:5%;
+}
+.promotion .speed
+{
+    border:solid 5px rgb(85, 235, 255);
+    border-radius: 50%;
+    height:100px;
+    width:100px; 
+    padding-top: 30px;
+    padding-left: 20px;
+    border-top: none;
+}
+.promotion .fast
+{
+    padding-top: 30px;
+    line-height: 1.6;
+}
+.promotion .blue-background
+{
+    background-color: rgb(218, 243, 235);
+    height:40%;
+    width: 80%;
+    border-radius: 20%;
+    position:absolute;
+    top:60%;
+    z-index:-2;
+}
+.promotion > .preview-container >.promo-image
+{
+    width:40%;
+    border-radius: 20%;
+    position: absolute;
+    top:20%;
+    left:100%;
+    transform: rotate(10deg);
+    background-color: white;
+    padding:5px;
+}
+
+.promotion > .preview-container >.promo-image >div
+{
+    display:grid;
+    grid-template-columns: auto auto;
+}
+.promotion > .preview-container >.promo-image img
+{
+    filter: blur(1.5px);
+}
+
+.promotion .preview-container > .promo-image .first-line
+{
+    width:50px;
+    height: 5px;
+    margin-top: 50px;
+    background-color: grey;
+}
+.promotion .preview-container > .promo-image .second-line
+{
+    width:100px;
+    height: 3px;
+    margin-top: 20px;
+    background-color: grey;
+}
+.social-networks
+{
+    grid-area:social-networks;
+}
+.product
+{
+    grid-area:product;
+}
+.data-records
+{
+    grid-area:data-records;
+}
+.customer
+{
+    grid-area:customer;
+
+}
+.review
+{
+    grid-area:review;
+
+}
+.download
+{
+    grid-area:download;
+
+}
+.footer
+{
+    grid-area:footer;
+
+}
+.footer ul
+{
+    list-style-type: none;
+    display:inline-block;
+}
+button img{
+    width:150px;
+    height:50px;
+}
+h1 > a 
+{
+    color: red;
+}
+.social-networks .logo img
+{
+    width: 10%;
+    height: 1%;
+    margin: 4%;
+}
+ul a
+{
+    text-decoration: none;
+}
+.app-store
+{
+    background-color: rgb(211, 211, 226);
+}
+.google-play
+{
+    background-color: rgb(0, 0, 160);
+}
+.google-play ,.app-store
+
+{
+    border-radius: 20px;
+    padding: 10px;
+    border:none ;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
