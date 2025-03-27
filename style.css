@@ -19,9 +19,10 @@
 .header
 {
     grid-area: header;
-    margin: 1%;
+    padding: 1% 3%;
+    background-color: #E9F7F6;
 }
-.header h2
+.header h2 , footer h2
 {
     display: inline;
 }
@@ -30,21 +31,24 @@
     display:inline-flex;
     list-style-type: none;
     padding-top: 10px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10%;
+    margin-left: 10%;
+    margin-right: 20%;
 }
 .header a
 {
     margin: 25px;
     color: grey;
+    font-size: 20px;
 }
 .header button
 {
     padding:15px;
     width:150px;
-    border-radius: 10%;
+    border-radius: 20px;
     border:none;
     font-size: 20px;
+    margin:5px;
 }
 .header .sign-up
 {
@@ -55,7 +59,11 @@
 .promotion
 {
     grid-area:promotion;
-    display:inline-flex;
+    display:flex;
+    background-color: #E9F7F6;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 20%;
+    padding-bottom: 10%;
 }
 .promotion .main
 {
@@ -64,8 +72,9 @@
 }
 .promotion .main h1
 {
-    font-size: 55px;
-    color:rgb(0,0,51)
+    font-size: 60px;
+    color:rgb(0,0,51);  
+    font-family: wid;
 }
 .promotion .main p
 {
@@ -82,6 +91,8 @@
 .promotion .preview-container
 {
     position:relative;
+    transform: rotate(-5deg);
+    padding-top: 3%;
 }
 .promotion .preview
 {
@@ -90,6 +101,7 @@
     padding: 30px;
     border-radius: 5%;
     z-index: -1;
+    box-shadow: 5px 5px rgba(0, 0, 0 , 0.2);
 }
 .promotion .preview .image
 {
@@ -128,7 +140,7 @@
     padding-top: 17%;
     padding-left: 100px;
 }
-.promotion .roger p , .promotion .salary p
+.promotion .roger p , .promotion .salary p ,.mobile p
 {
     color: grey;
     font-weight: bolder;
@@ -144,15 +156,13 @@
     text-align: center;
     border-radius: 20%;
     position: absolute;
-    top:40%;
+    top:50%;
     left:50%;
-    /* z-index:-1; */
 }
 .promotion .preview-container > .man-image img
 {
     border-radius: 20%;
-    width:100% ;
-
+    width:80% ;
 }
 .promotion .uploading
 {
@@ -163,7 +173,7 @@
     width:70%;
     background-color: white;
     position:absolute;
-    top:85%;
+    top:82%;
     left:5%;
 }
 .promotion .speed
@@ -184,14 +194,14 @@
 .promotion .blue-background
 {
     background-color: rgb(218, 243, 235);
-    height:40%;
+    height:42%;
     width: 80%;
     border-radius: 20%;
     position:absolute;
     top:60%;
     z-index:-2;
 }
-.promotion > .preview-container >.promo-image
+.preview-container >.promo-image
 {
     width:40%;
     border-radius: 20%;
@@ -201,19 +211,20 @@
     transform: rotate(10deg);
     background-color: white;
     padding:5px;
+    box-shadow: 5px 5px rgba(0, 0, 0 , 0.2);
 }
 
-.promotion > .preview-container >.promo-image >div
+.promo-image >div
 {
     display:grid;
     grid-template-columns: auto auto;
 }
-.promotion > .preview-container >.promo-image img
+.preview-container >.promo-image img
 {
-    filter: blur(1.5px);
+    filter: blur(1px);
 }
 
-.promotion .preview-container > .promo-image .first-line
+.preview-container > .promo-image .first-line
 {
     width:50px;
     height: 5px;
@@ -230,39 +241,452 @@
 .social-networks
 {
     grid-area:social-networks;
+    margin: 5% 0 0 0;
+}
+.social-networks p
+{
+    font-size: 30px;
+    color:grey;
+    justify-self: center;
+}
+.social-networks span
+{
+    color:black;
+    font-weight: bolder;
+}
+.social-networks .logo
+{
+    margin-left:10%;
 }
 .product
 {
     grid-area:product;
+    background-color: #E9F7F6;
+    padding: 5%;
+    margin:5%;
+    border-radius:30px;
+}
+.product > h1 , .customer > h1 , .review > h1 
+{
+    justify-self: center;
+    font-weight: lighter;
+    color:rgb(0,0,51);
+    font-size: 50px;
+    margin-bottom: 2%;
+    font-family: wid;
+}
+.product > div
+{
+    display:flex;
+    justify-content: center;
+}
+.product > div > div
+{
+    justify-items: center;
+    height:300px;
+    padding: 3% 0;
+    color:rgb(0,0,51);
+    margin: 3%;
+    background-color: white;
+    border-radius: 5%;
+}
+.product > div > div:hover
+{
+    border:palevioletred 3px solid;
+    border-radius: 5%;
+    transform: scale(1.2);
+}
+.product i , .mobile > i , .account i
+{
+    font-size:50px;
+    margin-bottom: 20px;
+}
+.product p 
+{
+    padding:10%;
+    margin-left: 10%;
 }
 .data-records
 {
     grid-area:data-records;
+    display:grid;
+    grid-template-columns: auto auto;
+    padding: 10%;
+}
+.data-records .numbers
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30%;
+    width:50%;
+    line-height: 2;
+}
+.data-records h1
+{
+    font-size:60px;
+    color:rgb(0,0,51);
+    font-family: wid;
+    font-weight: lighter;
+}
+.numbers p
+{
+    color:rgb(0,0,51);
+    font-weight:bolder;
+    font-size:20px;
+}
+.data-records .paragraph
+{
+    padding:3% 65% 3% 0;
+    color: grey;
+    line-height:1.6;
+}
+.data-records .account
+{
+    position:relative;
+}
+.account .image > img
+{
+    height:600px;
+    width:600px; 
+}
+.account .image
+{
+    background-color: #E9F7F6;
+    border-radius: 30px; 
+    box-shadow: 10px 10px rgb(0,0,0,0.2);   
+}
+.account .watch
+{
+    padding:5%;
+    background-color: white;
+    width: 70%;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgb(0,0,0,0.2);
+    position: absolute;
+    top:-10%;
+    left:40%;
+}
+.watch > div
+{
+    display:flex;
+}
+.account .watch button
+{
+    width:150px;
+    border-radius: 20px;
+    font-size: 30px;
+    color:white;
+    background-color:#1c1eb5;
+    border:none;
+    margin:10px;
+}
+.account .study
+{
+    background-color: white;
+    width: 30%;
+    justify-items: center;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgb(0,0,0,0.2);
+    position:absolute;
+    top:70%;
+    left:-5%;
+}
+.account .study button
+{
+    width:150px;
+    border-radius: 20px;
+    font-size: 30px;
+    color:white;
+    background-color:#d314da;
+    border:none;
+    margin-top:15px;
+}
+.study p
+{
+    padding: 1% 10%;
+    text-align:center;
 }
 .customer
 {
     grid-area:customer;
-
+    margin: 5%;
+    background-color: rgb(253, 242, 238);
+}
+.customer .container
+{
+    display:flex;
+}
+.customer .container div
+{
+    margin:5%;
+}
+.customer .setting
+{
+    width:40%;
+    height: 80%;
+    padding: 2%;
+    box-shadow: 10px 10px rgb(0,0,0,0.2);
+    border-radius: 20px;
+    line-height: 2;
+    transform: rotate(5deg);
+    background-color: white;
+}
+.customer h1
+{
+    padding:0 30%;
+    text-align: center;
+}
+.customer .mobile
+{
+    line-height: 2;
+    width:40%;
+    padding-top: 10%;
+}
+.mobile h1
+{  
+    font-size:40px;
+    color:rgb(0,0,51);
+    font-family: wid;
+}
+.customer .mobile button
+{
+    padding:5%;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    background-color:rgb(0,0,51) ;
+    color:white;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 5%;
+}
+.customer .language
+{
+    display:inline-flex;
+}
+.customer .language p 
+{
+    padding: 15% 8%;
+}
+.setting i , .icon i, .review i ,.social-nw i
+{
+    font-size: 40px;
+    margin-top: 20px;
+}
+.customer .designer
+{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap:10px;
+}
+.customer .social-app
+{
+    padding: 5%;
+    justify-content: center;
+    border-radius: 5%;
+    box-shadow: 10px 10px rgb(0,0,0,0.2);
+    transform: rotate(5deg);
+    background-color: white;
+}
+.customer .social-app .image
+{
+    border:dashed orange 5px;
+    width:120px;
+    height:120px;
+    border-radius: 50%;
+    padding: 5px;
+    justify-self: center;
+}
+.social-app h3 
+{
+    justify-self: center;
+}
+.social-app h1
+{
+    text-align: center;
+}
+.customer .social-app .fa-solid
+{
+    margin-right: 70%;
+}
+.customer .social-app button
+{
+    width:300px;
+    padding: 5%;
+    margin:5%;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.customer .social-app .login
+{
+    background-color: white;
+}
+.customer .social-app .sign-up
+{
+    background-color: rgb(243, 136, 172);
+    border: none;
+    color:white;
 }
 .review
 {
     grid-area:review;
-
+    position:relative;
+}
+.review #left-arrow , .review #right-arrow
+{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 5px;
+}
+#left-arrow
+{
+    position:absolute;
+    top:50%;
+    left:7%;
+    border:rgb(243, 136, 172) 2px solid;
+    background-color: white;
+}
+#right-arrow
+{
+    position:absolute;
+    top:50%;
+    left:90%;
+    background-color:rgb(243, 136, 172);
+}
+.review .profile
+{
+    display:flex;
+    height:500px;
+    width: 80%;
+    justify-self: center;
+    margin: 5%;
+}
+.review .profile h2
+{
+    margin-top:3%;
+    font-size: 30px;
+}
+.review img
+{
+    height:40%;
+}
+.review .rate
+{
+    display:inline-flex;
+    margin-left:50%;
+    font-size: 40px;
+}
+.review .business-man
+{
+    border:rgb(243, 136, 172) 2px solid;
+    border-radius: 30px;
+    padding: 5%;
+}
+.review .business-man .rate
+{
+    color:black;
+    font-weight: bolder;
+}
+.review .business-woman
+{
+    padding: 5%;
+}
+.review .business-woman .rate
+{
+    color:rgba(255, 255, 57,1);
+    font-weight: bolder;
+}
+.review .paragraph
+{
+    padding-right: 10%;
+    font-size:20px;
+    color:grey;
+}
+.profile h4
+{
+    margin:5px 0 20px ;
+    font-size:20px;
 }
 .download
 {
     grid-area:download;
-
+    display: flex;
+    width:80%;
+    margin: auto;
+    padding: 4%;
+}
+.download .download-app
+{
+    line-height:6;
+    padding: 10%;
+}
+.download-app > h1
+{
+    color:rgb(0,0,51);
+    font-size:50px;
+    line-height: 1;
+    font-family: wid;
+}
+.download-app a
+{
+    color:rgb(0,0,51) ;
+    font-size:1.2em;
+}
+.download h2,p
+{
+    color:grey;
 }
 .footer
 {
     grid-area:footer;
-
+    background-color: rgb(0,0,51);
 }
 .footer ul
 {
     list-style-type: none;
     display:inline-block;
+    line-height: 2;
+    margin: 3% 5%;
+}
+.footer a
+{
+    color:grey;
+}
+.footer h2
+{
+    color:white;
+    font-weight: lighter;
+}
+.footer div
+{
+    background-color: black;
+    color:white;
+    padding:1.5%;
+}
+.footer span
+{
+    margin:3%;
+}
+.footer > div > p
+{
+    display: inline;
+}
+.footer .copyright
+{
+    margin-right: 50%;
+    margin-left: 5%;
+    color:white;
+}
+.footer .social-nw
+{
+    display: inline-flex;
+}
+.social-nw li
+{
+    margin:10%;
 }
 button img{
     width:150px;
@@ -282,20 +706,16 @@ ul a
 {
     text-decoration: none;
 }
-.app-store
+.google-play , .app-store
 {
-    background-color: rgb(211, 211, 226);
-}
-.google-play
-{
-    background-color: rgb(0, 0, 160);
-}
-.google-play ,.app-store
-
-{
+    border:solid 3px rgb(0,0,51);
     border-radius: 20px;
     padding: 10px;
-    border:none ;
     margin-top: 5%;
     margin-bottom: 3%;
+    background-color: white;
+}
+@font-face {
+    font-family: wid;
+    src: url(wid.ttf);
 }
